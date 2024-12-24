@@ -5,10 +5,9 @@ import Navbar from './components/Navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './components/Home'
+import SidebarChat from './components/SidebarChat'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <BrowserRouter>
       <Navbar/>
@@ -16,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/chat' element={<ChatInterface/>}></Route>
+        <Route path='/chat-test' element={<SidebarChat/>}></Route>
       </Routes>
     
     </BrowserRouter>

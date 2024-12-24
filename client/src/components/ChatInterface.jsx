@@ -19,8 +19,10 @@ import {
 } from "@/components/ui/card";
 import { Button } from './ui/button';
 import { ScrollArea } from './ui/scroll-area';
+import SidebarChat from './SidebarChat';
 
 const ChatInterface = () => {
+    const [open, setOpen] = useState(false)
     const fileInputRef = useRef(null);
     const [messages, setMessages] = useState([]);
     const [inputValue, setInputValue] = useState('');
@@ -58,28 +60,7 @@ const ChatInterface = () => {
   return (
     <div className="flex bg-gray-100 overflow-hidden h-screen pt-16 z-10">
         {/* Sidebar */}
-        
-        <SidebarProvider className="w-auto md:w-64 bg-sidebar">
-        <SidebarTrigger className="w-16  md:hidden"/>
-        <Sidebar className="mt-4">
-            <SidebarContent>
-                <SidebarGroup>
-                    <SidebarGroupLabel className="text-3xl text-black mb-10 pt-16">History</SidebarGroupLabel>
-                    <SidebarGroupContent>
-                        <SidebarMenu>
-                            {chatHistory.map((item) => (
-                                <SidebarMenuItem key={item.id}>
-                                <SidebarMenuButton asChild>
-                                    <div className="text-[18px]">{item?.title}</div>
-                                </SidebarMenuButton>
-                                </SidebarMenuItem>
-                            ))}
-                        </SidebarMenu>
-                    </SidebarGroupContent>
-                </SidebarGroup>
-            </SidebarContent>
-        </Sidebar>  
-        </SidebarProvider>
+        <SidebarChat/>
 
 
         {/* Main Chat Area */}
