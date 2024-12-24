@@ -11,13 +11,14 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import { Send, PaperclipIcon } from "lucide-react";
+import { Send, PaperclipIcon, MessageSquare } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "./ui/button";
 import { ScrollArea } from "./ui/scroll-area";
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
+import SidebarChat from "./SidebarChat";
 
 const ChatInterface = () => {
+  const [open, setOpen] = useState(false);
   const fileInputRef = useRef(null);
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -58,6 +59,7 @@ const ChatInterface = () => {
   return (
     <div className="flex bg-gray-100 overflow-hidden h-screen pt-16 z-10">
       {/* Sidebar */}
+      <SidebarChat />
 
       <SidebarProvider className="w-auto md:w-64 bg-sidebar">
         <SidebarTrigger className="w-16  md:hidden" />
