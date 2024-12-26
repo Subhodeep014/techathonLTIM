@@ -48,7 +48,7 @@ export default function SidebarChat() {
       { id: 2, title: 'Previous Chat 2', timestamp: '5 days ago' },
   ]);
   return (
-    <SidebarProvider className ="w-auto border-r  ">
+    <SidebarProvider className ="w-auto border-r">
         <Sidebar>
             <SidebarContent className="pt-16">
                 <SidebarGroup>

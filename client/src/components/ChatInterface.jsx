@@ -61,10 +61,9 @@ const ChatInterface = () => {
       {/* Sidebar */}
       <SidebarChat />
 
-      <SidebarProvider className="w-auto md:w-64 bg-sidebar">
-        <SidebarTrigger className="w-16  md:hidden" />
-        <Sidebar className="mt-4">
-          <SidebarContent>
+      {/* <SidebarProvider className="border-r w-auto">
+        <Sidebar>
+          <SidebarContent className="pt-16">
             <SidebarGroup>
               <SidebarGroupLabel className="text-3xl text-black mb-10 pt-16">
                 History
@@ -83,10 +82,13 @@ const ChatInterface = () => {
             </SidebarGroup>
           </SidebarContent>
         </Sidebar>
-      </SidebarProvider>
+        <main>
+          <SidebarTrigger className="bg-gray-300 z-0 absolute"/>
+        </main>
+      </SidebarProvider> */}
 
       {/* Main Chat Area */}
-      <div className="flex-1 flex flex-col overflow-y-hidden ">
+      <div className="flex-1 flex flex-col overflow-y-hidden">
         {/* Chat Messages */}
         <Card className="flex-1 m-4 overflow-y-hidden">
           <ScrollArea className="h-full">
