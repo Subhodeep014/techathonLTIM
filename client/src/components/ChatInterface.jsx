@@ -61,32 +61,6 @@ const ChatInterface = () => {
       {/* Sidebar */}
       <SidebarChat />
 
-      {/* <SidebarProvider className="border-r w-auto">
-        <Sidebar>
-          <SidebarContent className="pt-16">
-            <SidebarGroup>
-              <SidebarGroupLabel className="text-3xl text-black mb-10 pt-16">
-                History
-              </SidebarGroupLabel>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  {chatHistory.map((item) => (
-                    <SidebarMenuItem key={item.id}>
-                      <SidebarMenuButton asChild>
-                        <div className="text-[18px]">{item?.title}</div>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
-                  ))}
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </SidebarGroup>
-          </SidebarContent>
-        </Sidebar>
-        <main>
-          <SidebarTrigger className="bg-gray-300 z-0 absolute"/>
-        </main>
-      </SidebarProvider> */}
-
       {/* Main Chat Area */}
       <div className="flex-1 flex flex-col overflow-y-hidden">
         {/* Chat Messages */}
